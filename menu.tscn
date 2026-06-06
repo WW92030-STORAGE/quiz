@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bqw281v1mq6dn"]
+
+[ext_resource type="Script" uid="uid://ydbmd7qc6vm2" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="2_mae5d"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="3_mae5d"]
+
+[sub_resource type="SystemFont" id="SystemFont_ouk20"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_4hy44"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+subpixel_positioning = 0
+
+[node name="menu" type="Node2D" unique_id=621948258]
+script = ExtResource("1_ouk20")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=723214664]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=920915213]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LevelContainer" type="Node2D" parent="." unique_id=1426715962]
+
+[node name="Buttons" type="Node2D" parent="." unique_id=1257767659]
+
+[node name="begin" type="Button" parent="Buttons" unique_id=1704560072 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 416.0
+theme = ExtResource("2_mae5d")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "BEGIN"
+
+[node name="help" type="Button" parent="Buttons" unique_id=232947365 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 416.0
+theme = ExtResource("2_mae5d")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "HELP"
+
+[node name="credits" type="Button" parent="Buttons" unique_id=1904380759 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 544.0
+theme = ExtResource("2_mae5d")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "CREDITS"
+
+[node name="contact" type="Button" parent="Buttons" unique_id=362419449 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 1088.0
+offset_bottom = 544.0
+theme = ExtResource("2_mae5d")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "CONTACT"
+
+[node name="Label" type="Label" parent="." unique_id=784496476]
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 992.0
+offset_bottom = 288.0
+theme = ExtResource("3_mae5d")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_4hy44")
+theme_override_font_sizes/font_size = 250
+text = "AN ORDINARY
+ONLINE QUIZ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Buttons/begin" to="." method="_on_begin_button_down"]
+[connection signal="button_down" from="Buttons/help" to="." method="_on_help_button_down"]
+[connection signal="button_down" from="Buttons/credits" to="." method="_on_credits_button_down"]
+[connection signal="button_down" from="Buttons/contact" to="." method="_on_contact_button_down"]

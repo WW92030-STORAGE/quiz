@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c8gjhu5t73176"]
+
+[ext_resource type="Script" uid="uid://dt0gnqul7842s" path="res://levels/16/orb.gd" id="1_8o7qg"]
+[ext_resource type="Texture2D" uid="uid://cebkuen1cy0fm" path="res://assets/0.png" id="2_yer0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4efl"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Area2D" unique_id=523260545]
+script = ExtResource("1_8o7qg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2131967851]
+texture = ExtResource("2_yer0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1863616239]
+shape = SubResource("RectangleShape2D_i4efl")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dj7y731smejgl"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://dub1i5h745u4f" path="res://levels/32/new_physics_material.tres" id="1_oy0qv"]
+[ext_resource type="Script" uid="uid://b0iesuwiimtg7" path="res://levels/32/ball.gd" id="1_p0djf"]
+[ext_resource type="Texture2D" uid="uid://cfefnjc1fdtt8" path="res://assets/CIRCLE.png" id="2_oy0qv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0djf"]
+radius = 128.0
+
+[node name="Ball" type="RigidBody2D" unique_id=1008208538]
+physics_material_override = ExtResource("1_oy0qv")
+script = ExtResource("1_p0djf")
+metadata/size = Vector2(64, 64)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082106840]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("2_oy0qv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1773373439]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-1.9073486e-05, 5.722046e-06)
+scale = Vector2(0.9375, 0.9375)
+texture = ExtResource("2_oy0qv")
+
+[node name="pulsing" type="Sprite2D" parent="." unique_id=288076097]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.74999994, 0.74999994)
+texture = ExtResource("2_oy0qv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551026812]
+shape = SubResource("CircleShape2D_p0djf")

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://3p8wny5jwsoe"]
+
+[ext_resource type="Script" uid="uid://b35vmilk12maq" path="res://dead.gd" id="1_vrggy"]
+[ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="2_nihps"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="3_q2olc"]
+[ext_resource type="AudioStream" uid="uid://ishlnd3t8k7q" path="res://sound/dead.mp3" id="4_nihps"]
+
+[sub_resource type="SystemFont" id="SystemFont_ouk20"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+
+[sub_resource type="SystemFont" id="SystemFont_4hy44"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+
+[node name="dead" type="Node2D" unique_id=621948258]
+script = ExtResource("1_vrggy")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=723214664]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=920915213]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LevelContainer" type="Node2D" parent="." unique_id=1426715962]
+
+[node name="MarginContainer2" type="Container" parent="." unique_id=1725833359]
+offset_top = 576.0
+offset_right = 1152.0
+offset_bottom = 640.0
+
+[node name="Buttons" type="Node2D" parent="." unique_id=1257767659]
+
+[node name="restart" type="Button" parent="Buttons" unique_id=1704560072 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 416.0
+theme = ExtResource("2_nihps")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "RESTART"
+
+[node name="title" type="Button" parent="Buttons" unique_id=232947365 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 416.0
+theme = ExtResource("2_nihps")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "TITLE"
+
+[node name="Label" type="Label" parent="." unique_id=784496476]
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 992.0
+offset_bottom = 288.0
+theme = ExtResource("3_q2olc")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_4hy44")
+theme_override_font_sizes/font_size = 250
+text = "!GAME OVER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=722206874]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 1, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1963499889]
+stream = ExtResource("4_nihps")
+autoplay = true
+max_distance = 8000.0
+
+[connection signal="button_down" from="Buttons/restart" to="." method="_on_restart_button_down"]
+[connection signal="button_down" from="Buttons/title" to="." method="_on_title_button_down"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://beglbvkg67mn7"]
+
+[ext_resource type="Script" uid="uid://klpq30sn8uto" path="res://elements/bomb.gd" id="1_5ihj0"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="1_vr5j5"]
+
+[node name="BOMB" type="Node2D" unique_id=149175694]
+script = ExtResource("1_5ihj0")
+metadata/TIME = 10
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=795695128]
+offset_right = 128.0
+offset_bottom = 128.0
+color = Color(0, 1, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=32439296]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 120.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect2" unique_id=477998117]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 88.0
+theme = ExtResource("1_vr5j5")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 120
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1

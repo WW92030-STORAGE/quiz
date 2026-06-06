@@ -1,0 +1,50 @@
+# CREDITS
+
+- Game by NormalExisting. Inspired by The Impossible Quiz by Splapp-Me-Do
+- Created using Godot Engine
+- Blocks font by NormalExisting
+
+## MECHANICS AND LEVELS
+
+- Nos. 1 - 64: The Impossible Quiz by Splapp-Me-Do (some questions directly reference this series), various inside jokes and obscure references, memes, etc.
+- No. 32: Super Stacker by Gaz Thomas (aka. The Game Homepage aka. my childhood)
+- No. 40: Click Play (forgot the installment number) by Ninjadoodle
+- No. 48: Art by me, based on Zenith's Outer Reach and featuring various (fan) OCs within the universe.
+- No. 64: hashcash
+
+## SOUNDS
+
+Correct answer - https://pixabay.com/sound-effects/film-special-effects-blip-131856/
+Wrong answer - https://pixabay.com/sound-effects/film-special-effects-incorrect-buzzer-sound-147336/
+Game over - https://pixabay.com/sound-effects/film-special-effects-shutdown-386182/
+Win - https://pixabay.com/sound-effects/people-short-crowd-cheer-6713/ + https://pixabay.com/sound-effects/musical-065492-tadawav-80833/s
+
+## MUSIC (+ unofficial nicknames)
+
+- "Humble Beginnings" - Symphony No. 9 | Ludwig Van Beethoven (Musopen - European Archive)
+- "Descent Into Madness" - Violin Concerto No. 3 | Wolfgang Amaedus Mozart (Musopen - NOVA Community Chorus)
+- "Cephalopodan Circus" - Trumpet Concerto | Joseph Haydn (Musopen - European Archive)
+- "Uncertainty" - Piano Sonata No. 14 | Ludwig Van Beethoven (IMSLP - Paul Pitman)
+- "Dubious Alignments" - String Quartet No. 8 | Dimitri Shostakovich arranged by NormalExisting
+
+## SPOILERS BELOW
+
+You could go read what's below here and/or look at the source code for this game (especially to find the solutions).
+But where's the fun in that? Try completing the game (or even making an honest attempt) before looking to the files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SPOILERS
+
+- special.mp3 - discord notification
+- error.mp3 - slack notification (not actually an error, these two sounds play during the game to confuse you)

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b4sdnf726im8d"]
+
+[ext_resource type="Script" uid="uid://bqk7mbijm1s4u" path="res://side_menu.gd" id="1_g4wvt"]
+[ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="2_pjc1l"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="3_j6beo"]
+
+[sub_resource type="SystemFont" id="SystemFont_ouk20"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2nui"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_4hy44"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+
+[node name="help" type="Node2D" unique_id=621948258]
+script = ExtResource("1_g4wvt")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=723214664]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=920915213]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LevelContainer" type="Node2D" parent="." unique_id=1426715962]
+
+[node name="Buttons" type="Node2D" parent="." unique_id=1257767659]
+
+[node name="back" type="Button" parent="Buttons" unique_id=1704560072 groups=["BUTTON"]]
+offset_left = 864.0
+offset_top = 512.0
+offset_right = 1120.0
+offset_bottom = 608.0
+theme = ExtResource("2_pjc1l")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_font_sizes/font_size = 160
+text = "BACK"
+
+[node name="MarginContainer2" type="PanelContainer" parent="." unique_id=1804413694]
+offset_right = 1152.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l2nui")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=1835659027]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=784496476]
+layout_mode = 2
+theme = ExtResource("3_j6beo")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_4hy44")
+theme_override_font_sizes/font_size = 250
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=730629953]
+layout_mode = 2
+theme = ExtResource("3_j6beo")
+theme_override_font_sizes/font_size = 32
+text = "- Game by NormalExisting. Inspired by The Impossible Quiz by Splapp-Me-Do
+- Created using Godot Engine
+- Blocks font by NormalExisting
+- For more detailed credits (spoilers beware) see CREDITS.txt"
+autowrap_mode = 3
+
+[connection signal="button_down" from="Buttons/back" to="." method="_on_back_button_down"]

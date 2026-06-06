@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cnceo78ub677k"]
+
+[ext_resource type="Script" uid="uid://bim0tdhdidohu" path="res://levels/32/staticbox.gd" id="1_2hl8n"]
+[ext_resource type="PhysicsMaterial" uid="uid://dub1i5h745u4f" path="res://levels/32/new_physics_material.tres" id="1_72re3"]
+[ext_resource type="Texture2D" uid="uid://b37fb3x6o80dg" path="res://assets/colors/green.png" id="2_72re3"]
+[ext_resource type="Texture2D" uid="uid://cebkuen1cy0fm" path="res://assets/0.png" id="3_kqkqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lbb2"]
+size = Vector2(64, 64)
+
+[node name="StaticBox" type="StaticBody2D" unique_id=1688763764]
+physics_material_override = ExtResource("1_72re3")
+script = ExtResource("1_2hl8n")
+metadata/size = Vector2(64, 64)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082106840]
+texture = ExtResource("2_72re3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1773373439]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.74999994, 0.74999994)
+texture = ExtResource("3_kqkqc")
+
+[node name="pulsing" type="Sprite2D" parent="." unique_id=288076097]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.74999994, 0.74999994)
+texture = ExtResource("2_72re3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551026812]
+shape = SubResource("RectangleShape2D_4lbb2")

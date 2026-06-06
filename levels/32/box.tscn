@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://iiltgf247vvk"]
+
+[ext_resource type="Script" uid="uid://blpaf8hnobs55" path="res://levels/32/box.gd" id="1_14ey0"]
+[ext_resource type="Texture2D" uid="uid://b37fb3x6o80dg" path="res://assets/colors/green.png" id="1_28cdb"]
+[ext_resource type="PhysicsMaterial" uid="uid://dub1i5h745u4f" path="res://levels/32/new_physics_material.tres" id="1_x2tan"]
+[ext_resource type="Texture2D" uid="uid://cebkuen1cy0fm" path="res://assets/0.png" id="2_4lbb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lbb2"]
+size = Vector2(64, 64)
+
+[node name="Box" type="RigidBody2D" unique_id=1008208538]
+physics_material_override = ExtResource("1_x2tan")
+script = ExtResource("1_14ey0")
+metadata/size = Vector2(64, 64)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082106840]
+texture = ExtResource("1_28cdb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1773373439]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.74999994, 0.74999994)
+texture = ExtResource("2_4lbb2")
+
+[node name="pulsing" type="Sprite2D" parent="." unique_id=288076097]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.74999994, 0.74999994)
+texture = ExtResource("1_28cdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551026812]
+shape = SubResource("RectangleShape2D_4lbb2")

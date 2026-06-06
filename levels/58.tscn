@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://u6cvmg718k5f"]
+
+[ext_resource type="Script" uid="uid://dv6jfys320nb5" path="res://levels/level.gd" id="1_7fsxa"]
+[ext_resource type="PackedScene" uid="uid://depcpy47u02kw" path="res://levels/59.tscn" id="2_w3qqo"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="3_w3qqo"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="4_vj1hy"]
+[ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="5_xqf4y"]
+[ext_resource type="PackedScene" uid="uid://beglbvkg67mn7" path="res://elements/bomb.tscn" id="6_t8188"]
+[ext_resource type="Script" uid="uid://cx3746yvwdshv" path="res://levels/hidden_button.gd" id="7_w3qqo"]
+
+[node name="3A" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_7fsxa")
+metadata/correct = PackedInt32Array()
+metadata/skips_disabled = true
+metadata/succ = ExtResource("2_w3qqo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("3_w3qqo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=37945862]
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 992.0
+offset_bottom = 288.0
+theme = ExtResource("4_vj1hy")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "IF A IS FOR ARDUINO
+AND B IS FOR BEAST
+WHAT IS C FOR?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="Node2D" parent="." unique_id=919111171]
+
+[node name="Button1" type="Button" parent="Buttons" unique_id=19967470 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 416.0
+theme = ExtResource("5_xqf4y")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "COOKIEANN"
+
+[node name="Button2" type="Button" parent="Buttons" unique_id=315695661 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 416.0
+theme = ExtResource("5_xqf4y")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "CHARLIE"
+
+[node name="Button3" type="Button" parent="Buttons" unique_id=245207452 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 544.0
+theme = ExtResource("5_xqf4y")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "CAPSULE"
+
+[node name="Button4" type="Button" parent="Buttons" unique_id=1284229964 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 1088.0
+offset_bottom = 544.0
+theme = ExtResource("5_xqf4y")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "CREEPER"
+
+[node name="BOMB" parent="." unique_id=149175694 instance=ExtResource("6_t8188")]
+position = Vector2(1008, 16)
+
+[node name="Button" type="Button" parent="." unique_id=442520711]
+offset_left = 1008.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 144.0
+flat = true
+script = ExtResource("7_w3qqo")
+
+[connection signal="button_down" from="Buttons/Button1" to="." method="_on_button_1_button_down"]
+[connection signal="button_down" from="Buttons/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Buttons/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Buttons/Button4" to="." method="_on_button_4_button_down"]
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cwk3jmho47wls"]
+
+[ext_resource type="Script" uid="uid://dpjwaxea6mmge" path="res://ball.gd" id="1_hukev"]
+[ext_resource type="Texture2D" uid="uid://cfefnjc1fdtt8" path="res://assets/CIRCLE.png" id="2_4m8t3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4m8t3"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hukev"]
+radius = 64.0
+
+[node name="ball" type="RigidBody2D" unique_id=1416748628]
+script = ExtResource("1_hukev")
+metadata/color = Color(1, 0, 0, 1)
+metadata/scale = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=756492886]
+shape = SubResource("CircleShape2D_4m8t3")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1040030351]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4m8t3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1814177296]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=417696656]
+shape = SubResource("CircleShape2D_hukev")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

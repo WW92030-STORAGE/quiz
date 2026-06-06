@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://chtng0dgnvir1"]
+
+[ext_resource type="Script" uid="uid://cls2gfjq8s02x" path="res://levels/32/32.gd" id="1_fswla"]
+[ext_resource type="PackedScene" uid="uid://dh7dxc7tjh3pd" path="res://levels/32/32b.tscn" id="2_fswla"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="3_di1iq"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="4_fgn1m"]
+[ext_resource type="Texture2D" uid="uid://cfip2kau5w5y8" path="res://assets/colors/255.png" id="6_lp2h0"]
+[ext_resource type="PackedScene" uid="uid://rjg541rc1p2s" path="res://levels/32/staticball.tscn" id="7_fswla"]
+[ext_resource type="Texture2D" uid="uid://cfefnjc1fdtt8" path="res://assets/CIRCLE.png" id="7_tykwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dap8f"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dap8f"]
+radius = 128.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14ey0"]
+size = Vector2(64, 64)
+
+[node name="20" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_fswla")
+metadata/correct = PackedInt32Array(1)
+metadata/skips_disabled = true
+metadata/succ = ExtResource("2_fswla")
+metadata/queue = PackedVector3Array(1, 64, 64, 1, 64, 64, 1, 64, 64, 0, 640, 64)
+
+[node name="Label" type="Label" parent="." unique_id=139105103]
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 992.0
+offset_bottom = 128.0
+theme = ExtResource("3_di1iq")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "4/4 - ●x3 ■x1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("4_fgn1m")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1167001362]
+
+[node name="Indicators" type="Node2D" parent="." unique_id=245372022]
+
+[node name="BoxLabel" type="Sprite2D" parent="Indicators" unique_id=537444777]
+visible = false
+modulate = Color(0, 1, 0, 0.49803922)
+texture = ExtResource("6_lp2h0")
+
+[node name="Area2D" type="Area2D" parent="Indicators/BoxLabel" unique_id=1350677730]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Indicators/BoxLabel/Area2D" unique_id=1047658465]
+shape = SubResource("RectangleShape2D_dap8f")
+
+[node name="CircleLabel" type="Sprite2D" parent="Indicators" unique_id=1584189840]
+visible = false
+self_modulate = Color(0, 1, 0, 0.49803922)
+texture = ExtResource("7_tykwr")
+
+[node name="Area2D" type="Area2D" parent="Indicators/CircleLabel" unique_id=1604347181]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Indicators/CircleLabel/Area2D" unique_id=675758978]
+shape = SubResource("CircleShape2D_dap8f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=549749551]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1438718497]
+shape = SubResource("RectangleShape2D_14ey0")
+
+[node name="Ball" parent="." unique_id=1901833844 instance=ExtResource("7_fswla")]
+position = Vector2(320, 576)
+
+[node name="Ball2" parent="." unique_id=1684128424 instance=ExtResource("7_fswla")]
+position = Vector2(832, 576)

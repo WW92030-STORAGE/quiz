@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bf7eo4dhwjsue"]
+
+[ext_resource type="Script" uid="uid://dxe66b75udgn" path="res://levels/16/wall.gd" id="1_i4efl"]
+[ext_resource type="Texture2D" uid="uid://cebkuen1cy0fm" path="res://assets/0.png" id="1_n8x4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4efl"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Area2D" unique_id=523260545]
+script = ExtResource("1_i4efl")
+metadata/disp = Vector2(1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2131967851]
+texture = ExtResource("1_n8x4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1863616239]
+shape = SubResource("RectangleShape2D_i4efl")

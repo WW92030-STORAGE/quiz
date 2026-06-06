@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://wpqwqjey67dn"]
+
+[ext_resource type="Script" uid="uid://bfh1xuqxtkyd4" path="res://levels/40/40.gd" id="1_btf50"]
+[ext_resource type="PackedScene" uid="uid://dup85xc3qmmv7" path="res://levels/41.tscn" id="2_btf50"]
+[ext_resource type="Theme" uid="uid://pmws21h0cgau" path="res://assets/UI.tres" id="3_jxb5b"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="4_sl28i"]
+[ext_resource type="Texture2D" uid="uid://b37fb3x6o80dg" path="res://assets/colors/green.png" id="5_mpjit"]
+[ext_resource type="Texture2D" uid="uid://cfefnjc1fdtt8" path="res://assets/CIRCLE.png" id="6_blva2"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="7_3qtjt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dois"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_shfkg"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7obl3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3ifn2"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_shfkg"]
+bounce = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5dois"]
+radius = 64.0
+
+[sub_resource type="SystemFont" id="SystemFont_3ifn2"]
+font_names = PackedStringArray("BLOCKY BLOCKS")
+subpixel_positioning = 0
+
+[node name="28" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_btf50")
+metadata/correct = PackedInt32Array(1)
+metadata/skips_disabled = true
+metadata/succ = ExtResource("2_btf50")
+
+[node name="Label" type="Label" parent="." unique_id=139105103]
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 992.0
+offset_bottom = 144.0
+theme = ExtResource("3_jxb5b")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "ZERO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("4_sl28i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="." unique_id=424538640]
+
+[node name="walls" type="StaticBody2D" parent="Node2D" unique_id=866166872]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/walls" unique_id=394923192]
+shape = SubResource("WorldBoundaryShape2D_5dois")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/walls" unique_id=975863568]
+shape = SubResource("WorldBoundaryShape2D_shfkg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/walls" unique_id=2112804263]
+position = Vector2(0, 576)
+shape = SubResource("WorldBoundaryShape2D_7obl3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/walls/CollisionShape2D4" unique_id=2088518120]
+position = Vector2(8, 4)
+scale = Vector2(64, 0.125)
+texture = ExtResource("5_mpjit")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/walls" unique_id=1110006205]
+position = Vector2(1152, 0)
+shape = SubResource("WorldBoundaryShape2D_3ifn2")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D" unique_id=405691846]
+position = Vector2(576, 384)
+physics_material_override = SubResource("PhysicsMaterial_shfkg")
+contact_monitor = true
+max_contacts_reported = 16
+angular_damp = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/RigidBody2D" unique_id=2053303459]
+shape = SubResource("CircleShape2D_5dois")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/RigidBody2D" unique_id=273363944]
+modulate = Color(0, 1, 0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_blva2")
+
+[node name="Label" type="Label" parent="Node2D/RigidBody2D" unique_id=982901064]
+offset_left = -30.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 44.0
+theme = ExtResource("7_3qtjt")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3ifn2")
+theme_override_font_sizes/font_size = 250
+text = "0"
+
+[node name="Button" type="Button" parent="Node2D/RigidBody2D" unique_id=1770506973]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+flat = true
+
+[connection signal="body_entered" from="Node2D/RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]
+[connection signal="button_down" from="Node2D/RigidBody2D/Button" to="." method="_on_button_button_down"]

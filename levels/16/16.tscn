@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://7k2uimxvy6gq"]
+
+[ext_resource type="Script" uid="uid://b4e1immk84qg5" path="res://levels/16/16.gd" id="1_5dois"]
+[ext_resource type="PackedScene" uid="uid://c6nalngwrokda" path="res://levels/16/16b.tscn" id="2_pvlg8"]
+[ext_resource type="Theme" uid="uid://pmws21h0cgau" path="res://assets/UI.tres" id="3_pq38n"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="4_oo080"]
+[ext_resource type="Texture2D" uid="uid://b37fb3x6o80dg" path="res://assets/colors/green.png" id="5_2ls7m"]
+[ext_resource type="Texture2D" uid="uid://cfip2kau5w5y8" path="res://assets/colors/255.png" id="5_shfkg"]
+[ext_resource type="Texture2D" uid="uid://cebkuen1cy0fm" path="res://assets/0.png" id="6_3ifn2"]
+[ext_resource type="PackedScene" uid="uid://bf7eo4dhwjsue" path="res://levels/16/wall.tscn" id="6_ch5ny"]
+[ext_resource type="PackedScene" uid="uid://c8gjhu5t73176" path="res://levels/16/orb.tscn" id="7_pvlg8"]
+
+[node name="10" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_5dois")
+metadata/correct = PackedInt32Array(1)
+metadata/skips_disabled = true
+metadata/succ = ExtResource("2_pvlg8")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1986167014]
+
+[node name="Sprite2d" type="Sprite2D" parent="Node2D" unique_id=1085025140]
+position = Vector2(576, 544)
+scale = Vector2(15.999999, 1)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d2" type="Sprite2D" parent="Node2D" unique_id=684036476]
+position = Vector2(1056, 352)
+scale = Vector2(0.99999857, 5.0625)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d3" type="Sprite2D" parent="Node2D" unique_id=1379393887]
+position = Vector2(928, 159)
+scale = Vector2(5.0000005, 1.03125)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d4" type="Sprite2D" parent="Node2D" unique_id=136846708]
+position = Vector2(800, 320)
+scale = Vector2(1.0000001, 4.015625)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d5" type="Sprite2D" parent="Node2D" unique_id=284582180]
+position = Vector2(544.00006, 416.25)
+scale = Vector2(7.0000005, 1.0078125)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d6" type="Sprite2D" parent="Node2D" unique_id=1524880419]
+position = Vector2(352, 320.125)
+scale = Vector2(1.0000005, 2.003906)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d7" type="Sprite2D" parent="Node2D" unique_id=52384896]
+position = Vector2(543.99994, 287.9375)
+scale = Vector2(5, 1.001953)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d8" type="Sprite2D" parent="Node2D" unique_id=1527699516]
+position = Vector2(672, 192)
+scale = Vector2(0.99999905, 1.9999999)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d9" type="Sprite2D" parent="Node2D" unique_id=1221409610]
+position = Vector2(416, 160)
+scale = Vector2(6.999999, 0.99999994)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d10" type="Sprite2D" parent="Node2D" unique_id=1591462044]
+position = Vector2(224.00002, 320)
+scale = Vector2(0.9999994, 3.9999998)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d11" type="Sprite2D" parent="Node2D" unique_id=1264228763]
+position = Vector2(128.00002, 416)
+scale = Vector2(1.9999998, 0.99999946)
+texture = ExtResource("5_2ls7m")
+
+[node name="Sprite2d12" type="Sprite2D" parent="Node2D" unique_id=2060202805]
+position = Vector2(96, 320)
+scale = Vector2(0.9999999, 2.0000002)
+texture = ExtResource("5_2ls7m")
+
+[node name="end" type="TextureButton" parent="Node2D" unique_id=1222936716]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 128.0
+offset_bottom = 256.0
+texture_normal = ExtResource("5_shfkg")
+
+[node name="static" type="Node2D" parent="Node2D" unique_id=1604335923]
+
+[node name="TextureButton" type="TextureButton" parent="Node2D/static" unique_id=71706814]
+offset_top = 128.0
+offset_right = 192.0
+offset_bottom = 192.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton2" type="TextureButton" parent="Node2D/static" unique_id=1948698368]
+offset_top = 192.0
+offset_right = 64.0
+offset_bottom = 640.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton3" type="TextureButton" parent="Node2D/static" unique_id=403026438]
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 1152.0
+offset_bottom = 640.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton4" type="TextureButton" parent="Node2D/static" unique_id=142829500]
+offset_left = 1088.0
+offset_top = 64.0
+offset_right = 1152.0
+offset_bottom = 576.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton5" type="TextureButton" parent="Node2D/static" unique_id=1212695291]
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 128.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton6" type="TextureButton" parent="Node2D/static" unique_id=1156805926]
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 384.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton7" type="TextureButton" parent="Node2D/static" unique_id=1327749812]
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 320.0
+offset_bottom = 448.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton8" type="TextureButton" parent="Node2D/static" unique_id=131832453]
+offset_left = 704.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 320.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton9" type="TextureButton" parent="Node2D/static" unique_id=474976564]
+offset_left = 832.0
+offset_top = 192.0
+offset_right = 1024.0
+offset_bottom = 448.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton10" type="TextureButton" parent="Node2D/static" unique_id=1255863041]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 1024.0
+offset_bottom = 512.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton11" type="TextureButton" parent="Node2D/static" unique_id=2136961474]
+offset_left = 384.0
+offset_top = 320.0
+offset_right = 768.0
+offset_bottom = 384.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="TextureButton12" type="TextureButton" parent="Node2D/static" unique_id=227923197]
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 640.0
+offset_bottom = 256.0
+texture_normal = ExtResource("6_3ifn2")
+stretch_mode = 1
+
+[node name="moving" type="Node2D" parent="Node2D" unique_id=1316780886]
+
+[node name="Node2D2" parent="Node2D/moving" unique_id=523260545 instance=ExtResource("6_ch5ny")]
+position = Vector2(992, 352)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Node2D3" parent="Node2D/moving" unique_id=1903925612 instance=ExtResource("6_ch5ny")]
+position = Vector2(864, 352)
+collision_layer = 2
+collision_mask = 2
+metadata/disp = Vector2(-1, 0)
+
+[node name="Node2D4" parent="Node2D/moving" unique_id=902579758 instance=ExtResource("6_ch5ny")]
+position = Vector2(928, 224)
+collision_layer = 2
+collision_mask = 2
+metadata/disp = Vector2(0, -1)
+
+[node name="Node2D5" parent="Node2D/moving" unique_id=540029335 instance=ExtResource("7_pvlg8")]
+position = Vector2(224, 160)
+
+[node name="Node2D7" parent="Node2D/moving" unique_id=410382740 instance=ExtResource("7_pvlg8")]
+position = Vector2(672, 288)
+
+[node name="Node2D6" parent="Node2D/moving" unique_id=152787790 instance=ExtResource("7_pvlg8")]
+position = Vector2(96, 416)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=756061069]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer" unique_id=1662614791]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect2" unique_id=139105103]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 512.0
+offset_right = 512.0
+offset_bottom = 576.0
+theme = ExtResource("3_pq38n")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "TAP ME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/ColorRect2" unique_id=1434467617]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 512.0
+offset_right = 128.0
+offset_bottom = 576.0
+texture_normal = ExtResource("5_shfkg")
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="." unique_id=1592517683]
+offset_left = 256.0
+offset_right = 896.0
+offset_bottom = 128.0
+theme = ExtResource("3_pq38n")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "STAY ON GREEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("4_oo080")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Node2D/end" to="." method="_on_texture_button_2_button_down"]
+[connection signal="mouse_entered" from="Node2D/end" to="." method="_on_end_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton2" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton3" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton4" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton5" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton6" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton7" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton8" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton9" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton10" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton11" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/static/TextureButton12" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/moving/Node2D2" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/moving/Node2D3" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/moving/Node2D4" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/moving/Node2D5" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/moving/Node2D7" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D/moving/Node2D6" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="button_down" from="MarginContainer/ColorRect2/TextureButton" to="." method="_on_texture_button_button_down"]

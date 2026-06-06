@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d4ahbpn3cpqq"]
+
+[ext_resource type="Script" uid="uid://dslysho5who71" path="res://win2.gd" id="1_edm64"]
+
+[node name="help" type="Node2D" unique_id=621948258]
+script = ExtResource("1_edm64")

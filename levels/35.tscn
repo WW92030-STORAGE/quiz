@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bvumkxsivpdk3"]
+
+[ext_resource type="Script" uid="uid://dv6jfys320nb5" path="res://levels/level.gd" id="1_ag0et"]
+[ext_resource type="PackedScene" uid="uid://bf6jldchrnhjr" path="res://levels/36.tscn" id="2_ag0et"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="3_auhos"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="4_g27eg"]
+[ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="5_upo3u"]
+
+[node name="23" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_ag0et")
+metadata/correct = PackedInt32Array(0)
+metadata/skips_disabled = false
+metadata/succ = ExtResource("2_ag0et")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("3_auhos")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=37945862]
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 992.0
+offset_bottom = 288.0
+theme = ExtResource("4_g27eg")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "WHICH NUMBER DOES
+NOT BELONG?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="Node2D" parent="." unique_id=919111171]
+
+[node name="Button1" type="Button" parent="Buttons" unique_id=19967470 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 416.0
+theme = ExtResource("5_upo3u")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "1"
+
+[node name="Button2" type="Button" parent="Buttons" unique_id=315695661 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 416.0
+theme = ExtResource("5_upo3u")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "3"
+
+[node name="Button3" type="Button" parent="Buttons" unique_id=245207452 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 544.0
+theme = ExtResource("5_upo3u")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "5"
+
+[node name="Button4" type="Button" parent="Buttons" unique_id=1284229964 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 1088.0
+offset_bottom = 544.0
+theme = ExtResource("5_upo3u")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "7"
+
+[connection signal="button_down" from="Buttons/Button1" to="." method="_on_button_1_button_down"]
+[connection signal="button_down" from="Buttons/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Buttons/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Buttons/Button4" to="." method="_on_button_4_button_down"]

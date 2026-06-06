@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dor0xgtfv8y3b"]
+
+[ext_resource type="Script" uid="uid://dv6jfys320nb5" path="res://levels/level.gd" id="1_caypd"]
+[ext_resource type="PackedScene" uid="uid://iykoca7ab8va" path="res://levels/55b.tscn" id="2_d6yp2"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="3_g8htl"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="4_t08s1"]
+[ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="5_es3oa"]
+[ext_resource type="PackedScene" uid="uid://beglbvkg67mn7" path="res://elements/bomb.tscn" id="6_d6yp2"]
+
+[node name="37" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_caypd")
+metadata/correct = PackedInt32Array(0)
+metadata/skips_disabled = true
+metadata/succ = ExtResource("2_d6yp2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("3_g8htl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=37945862]
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 1024.0
+offset_bottom = 288.0
+theme = ExtResource("4_t08s1")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "HOW MUCH AI WAS
+USED IN THIS GAME?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Buttons" type="Node2D" parent="." unique_id=919111171]
+
+[node name="Button1" type="Button" parent="Buttons" unique_id=19967470 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 416.0
+theme = ExtResource("5_es3oa")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "NONE AT ALL"
+
+[node name="Button2" type="Button" parent="Buttons" unique_id=315695661 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 416.0
+theme = ExtResource("5_es3oa")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "A LITTLE BIT"
+
+[node name="Button3" type="Button" parent="Buttons" unique_id=245207452 groups=["BUTTON"]]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 544.0
+theme = ExtResource("5_es3oa")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+text = "QUITE A LOT"
+
+[node name="Button4" type="Button" parent="Buttons" unique_id=1284229964 groups=["BUTTON"]]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 1088.0
+offset_bottom = 544.0
+theme = ExtResource("5_es3oa")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "THIS GAME IS ENTIRELY
+AND UTTERLY VIBE CODED"
+
+[node name="BOMB" parent="." unique_id=149175694 instance=ExtResource("6_d6yp2")]
+position = Vector2(1008, 16)
+metadata/TIME = 5
+
+[connection signal="button_down" from="Buttons/Button1" to="." method="_on_button_1_button_down"]
+[connection signal="button_down" from="Buttons/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Buttons/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Buttons/Button4" to="." method="_on_button_4_button_down"]

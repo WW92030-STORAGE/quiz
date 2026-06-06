@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://fihfhrxcg484"]
+
+[ext_resource type="Script" uid="uid://bvjkxfcyplsr1" path="res://levels/08/08.gd" id="1_suqb5"]
+[ext_resource type="PackedScene" uid="uid://dmvcf3gesqtt8" path="res://levels/08/08b.tscn" id="2_fd2ut"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="3_edf56"]
+[ext_resource type="Texture2D" uid="uid://b37fb3x6o80dg" path="res://assets/colors/green.png" id="4_suqb5"]
+[ext_resource type="Theme" uid="uid://pmws21h0cgau" path="res://assets/UI.tres" id="5_fd2ut"]
+
+[node name="08" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_suqb5")
+metadata/correct = PackedInt32Array(1)
+metadata/skips_disabled = false
+metadata/succ = ExtResource("2_fd2ut")
+
+[node name="Label" type="Label" parent="." unique_id=139105103]
+offset_left = 160.0
+offset_right = 992.0
+offset_bottom = 256.0
+theme = ExtResource("5_fd2ut")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "!GREEN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("3_edf56")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="." unique_id=982659755]
+position = Vector2(576, 320)
+
+[node name="Node2D2" type="Node2D" parent="Node2D" unique_id=657885697]
+
+[node name="Sprite2D0" type="Sprite2D" parent="Node2D/Node2D2" unique_id=2027547337]
+position = Vector2(-96, -96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D1" type="Sprite2D" parent="Node2D/Node2D2" unique_id=1277998803]
+position = Vector2(-32, -96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Node2D2" unique_id=1462198809]
+position = Vector2(32, -96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Node2D2" unique_id=1300120419]
+position = Vector2(96, -96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Node2D2" unique_id=272729291]
+position = Vector2(-96, -32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Node2D2" unique_id=2128906586]
+position = Vector2(-32, -32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Node2D2" unique_id=565351232]
+position = Vector2(32, -32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Node2D2" unique_id=835085005]
+position = Vector2(96, -32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D/Node2D2" unique_id=128544247]
+position = Vector2(-96, 32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node2D/Node2D2" unique_id=1936196501]
+position = Vector2(-32, 32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Node2D/Node2D2" unique_id=1728293214]
+position = Vector2(32, 32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Node2D/Node2D2" unique_id=367800944]
+position = Vector2(96, 32)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Node2D/Node2D2" unique_id=537133788]
+position = Vector2(-96, 96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Node2D/Node2D2" unique_id=860010696]
+position = Vector2(-32, 96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Node2D/Node2D2" unique_id=1475544146]
+position = Vector2(32, 96)
+texture = ExtResource("4_suqb5")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Node2D/Node2D2" unique_id=837107396]
+position = Vector2(96, 96)
+texture = ExtResource("4_suqb5")
+
+[node name="b0" type="Button" parent="Node2D" unique_id=1737102344]
+offset_left = -128.0
+offset_top = -128.0
+offset_right = -64.0
+offset_bottom = -64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b1" type="Button" parent="Node2D" unique_id=1460200051]
+offset_left = -64.0
+offset_top = -128.0
+offset_bottom = -64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b2" type="Button" parent="Node2D" unique_id=60807817]
+offset_top = -128.0
+offset_right = 64.0
+offset_bottom = -64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b3" type="Button" parent="Node2D" unique_id=377656069]
+offset_left = 64.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = -64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b4" type="Button" parent="Node2D" unique_id=2079876974]
+offset_left = -128.0
+offset_top = -64.0
+offset_right = -64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b5" type="Button" parent="Node2D" unique_id=403816129]
+offset_left = -64.0
+offset_top = -64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b6" type="Button" parent="Node2D" unique_id=2054571307]
+offset_top = -64.0
+offset_right = 64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b7" type="Button" parent="Node2D" unique_id=1002319347]
+offset_left = 64.0
+offset_top = -64.0
+offset_right = 128.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b8" type="Button" parent="Node2D" unique_id=311383957]
+offset_left = -128.0
+offset_right = -64.0
+offset_bottom = 64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b9" type="Button" parent="Node2D" unique_id=1733767689]
+offset_left = -64.0
+offset_bottom = 64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b10" type="Button" parent="Node2D" unique_id=2104550875]
+offset_right = 64.0
+offset_bottom = 64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b11" type="Button" parent="Node2D" unique_id=768318558]
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b12" type="Button" parent="Node2D" unique_id=667403514]
+offset_left = -128.0
+offset_top = 64.0
+offset_right = -64.0
+offset_bottom = 128.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b13" type="Button" parent="Node2D" unique_id=2114686551]
+offset_left = -64.0
+offset_top = 64.0
+offset_bottom = 128.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b14" type="Button" parent="Node2D" unique_id=1658239561]
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="b15" type="Button" parent="Node2D" unique_id=105429821]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Node2D/b0" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b1" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b2" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b3" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b4" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b5" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b6" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b7" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b8" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b9" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b10" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b11" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b12" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b13" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b14" to="." method="_on_b_button_down" flags=18]
+[connection signal="button_down" from="Node2D/b15" to="." method="_on_b_button_down" flags=18]

@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bdut8vjwamq6x"]
+
+[ext_resource type="Script" uid="uid://d4f4avjxphrwo" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="Theme" uid="uid://pmws21h0cgau" path="res://assets/UI.tres" id="2_e2o6t"]
+[ext_resource type="Theme" uid="uid://jvwv41h77753" path="res://assets/ui_button.tres" id="3_feb5d"]
+[ext_resource type="AudioStream" uid="uid://ditrpcx5thkq0" path="res://music/symphony9.mp3" id="4_fc0e3"]
+[ext_resource type="AudioStream" uid="uid://bl5330rela72k" path="res://sound/advance.mp3" id="5_7jktm"]
+[ext_resource type="AudioStream" uid="uid://dwjlq50y5v2t0" path="res://sound/wrong.mp3" id="6_ryrav"]
+
+[node name="game" type="Node2D" unique_id=621948258]
+script = ExtResource("1_80nbo")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=723214664]
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=920915213]
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LevelContainer" type="Node2D" parent="." unique_id=1426715962]
+
+[node name="LIVES" type="Label" parent="." unique_id=1924570887]
+offset_top = 576.0
+offset_right = 320.0
+offset_bottom = 639.0
+theme = ExtResource("2_e2o6t")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "LIVES-0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CLICKS" type="Label" parent="." unique_id=2064677507]
+offset_left = 640.0
+offset_top = 576.0
+offset_right = 1120.0
+offset_bottom = 640.0
+theme = ExtResource("2_e2o6t")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "999999 CLICKS"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SKIPS" type="Button" parent="." unique_id=1063089296]
+offset_left = 320.0
+offset_top = 576.0
+offset_right = 640.0
+offset_bottom = 640.0
+theme = ExtResource("3_feb5d")
+text = "SKIPS-0
+"
+
+[node name="WRONGANS" type="ColorRect" parent="." unique_id=1108841148]
+offset_left = 224.0
+offset_top = 512.0
+offset_right = 800.0
+offset_bottom = 576.0
+color = Color(0, 1, 0, 1)
+
+[node name="Label" type="Label" parent="WRONGANS" unique_id=1002189550]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 616.0
+offset_bottom = 64.0
+theme = ExtResource("2_e2o6t")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "V!WRONG ANSWER!"
+vertical_alignment = 1
+
+[node name="music" type="AudioStreamPlayer2D" parent="." unique_id=927950270]
+stream = ExtResource("4_fc0e3")
+autoplay = true
+max_distance = 8000.0
+bus = &"New Bus"
+
+[node name="advance" type="AudioStreamPlayer2D" parent="." unique_id=1116478118]
+stream = ExtResource("5_7jktm")
+max_distance = 8000.0
+
+[node name="wrong" type="AudioStreamPlayer2D" parent="." unique_id=1136485947]
+stream = ExtResource("6_ryrav")
+max_distance = 8000.0
+
+[node name="misc" type="AudioStreamPlayer2D" parent="." unique_id=977733979]
+
+[connection signal="button_down" from="SKIPS" to="." method="_on_skips_button_down"]

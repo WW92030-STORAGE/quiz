@@ -1,0 +1,293 @@
+[gd_scene format=3 uid="uid://vvn5o5yr4b0q"]
+
+[ext_resource type="Script" uid="uid://oof6ww7lc3py" path="res://levels/48/48.gd" id="1_h21w6"]
+[ext_resource type="PackedScene" uid="uid://cyb1ydgox134i" path="res://levels/48/48b.tscn" id="2_gfa6i"]
+[ext_resource type="Texture2D" uid="uid://dqhh135746hej" path="res://levels/48/debugging.png" id="3_c10xh"]
+[ext_resource type="Theme" uid="uid://pmws21h0cgau" path="res://assets/UI.tres" id="3_cs3cd"]
+[ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="4_4qj18"]
+[ext_resource type="PackedScene" uid="uid://v25xk4womhij" path="res://levels/48/fakebomb.tscn" id="6_gfa6i"]
+[ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="6_smslb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h21w6"]
+bg_color = Color(0, 0, 0, 0.49803922)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkbaj"]
+bg_color = Color(0, 0, 0, 0.24705882)
+border_width_left = 4
+border_width_top = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c10xh"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfa6i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfa6i"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+
+[node name="30" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
+script = ExtResource("1_h21w6")
+metadata/correct = PackedInt32Array(1)
+metadata/skips_disabled = true
+metadata/succ = ExtResource("2_gfa6i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1849754320]
+position = Vector2(576, 304)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_c10xh")
+
+[node name="Label" type="Label" parent="." unique_id=139105103]
+visible = false
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 992.0
+offset_bottom = 144.0
+theme = ExtResource("3_cs3cd")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 160
+theme_override_styles/normal = SubResource("StyleBoxFlat_h21w6")
+text = "SEARCH!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1793588748]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 1, 0, 1)
+
+[node name="Number" type="Label" parent="ColorRect" unique_id=410272308]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("4_4qj18")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Descriptions" type="Node2D" parent="." unique_id=166838336]
+position = Vector2(64, 192)
+
+[node name="Label2" type="Label" parent="Descriptions" unique_id=819766436]
+offset_right = 256.0
+offset_bottom = 256.0
+theme = ExtResource("6_smslb")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mkbaj")
+text = ".........x.........x.........x.........x.........x.........x.........x......78"
+autowrap_mode = 3
+
+[node name="BOMB" parent="." unique_id=149175694 instance=ExtResource("6_gfa6i")]
+position = Vector2(1008, 16)
+
+[node name="Buttons" type="Node2D" parent="." unique_id=1962679689]
+
+[node name="blue_paper" type="Button" parent="Buttons" unique_id=133891709]
+offset_left = 464.0
+offset_right = 560.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="mersenne" type="Button" parent="Buttons" unique_id=57422550]
+offset_left = 424.0
+offset_top = 48.0
+offset_right = 528.0
+offset_bottom = 128.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="aemythist" type="Button" parent="Buttons" unique_id=1965798919]
+offset_left = 408.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="bug" type="Button" parent="Buttons" unique_id=310429463]
+offset_left = 560.0
+offset_top = 320.0
+offset_right = 696.0
+offset_bottom = 400.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="danny" type="Button" parent="Buttons" unique_id=964014371]
+offset_left = 32.0
+offset_top = 560.0
+offset_right = 144.0
+offset_bottom = 624.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="mobius" type="Button" parent="Buttons" unique_id=1832682371]
+offset_left = 344.0
+offset_top = 440.0
+offset_right = 528.0
+offset_bottom = 544.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="flatjewel12" type="Button" parent="Buttons" unique_id=629958317]
+offset_left = 440.0
+offset_top = 592.0
+offset_right = 560.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="booper" type="Button" parent="Buttons" unique_id=1510843211]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 672.0
+offset_bottom = 576.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="whiteboard" type="Button" parent="Buttons" unique_id=839344259]
+offset_left = 552.0
+offset_top = 528.0
+offset_right = 632.0
+offset_bottom = 592.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="beepy" type="Button" parent="Buttons" unique_id=1910462555]
+offset_left = 696.0
+offset_top = 424.0
+offset_right = 864.0
+offset_bottom = 520.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="laser" type="Button" parent="Buttons" unique_id=900745016]
+offset_left = 760.0
+offset_top = 368.0
+offset_right = 904.0
+offset_bottom = 432.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="orbit" type="Button" parent="Buttons" unique_id=745824692]
+offset_left = 944.0
+offset_top = 256.0
+offset_right = 1088.0
+offset_bottom = 512.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="laptop" type="Button" parent="Buttons" unique_id=925998636]
+offset_left = 880.0
+offset_top = 280.0
+offset_right = 960.0
+offset_bottom = 400.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="abyss" type="Button" parent="Buttons" unique_id=1126229632]
+offset_left = 704.0
+offset_top = 208.0
+offset_right = 808.0
+offset_bottom = 320.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="irridius" type="Button" parent="Buttons" unique_id=363534145]
+offset_left = 768.0
+offset_top = 280.0
+offset_right = 896.0
+offset_bottom = 360.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="bomb" type="Button" parent="Buttons" unique_id=1832938206]
+offset_left = 1008.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 144.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[node name="black_paper" type="Button" parent="Buttons" unique_id=1892281725]
+offset_left = 224.0
+offset_right = 304.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c10xh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gfa6i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfa6i")
+
+[connection signal="button_down" from="Buttons/blue_paper" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/blue_paper" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/blue_paper" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/mersenne" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/mersenne" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/mersenne" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/aemythist" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/aemythist" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/aemythist" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/bug" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/bug" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/bug" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/danny" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/danny" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/danny" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/mobius" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/mobius" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/mobius" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/flatjewel12" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/flatjewel12" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/flatjewel12" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/booper" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/booper" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/booper" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/whiteboard" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/whiteboard" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/whiteboard" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/beepy" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/beepy" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/beepy" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/laser" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/laser" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/laser" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/orbit" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/orbit" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/orbit" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/laptop" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/laptop" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/laptop" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/abyss" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/abyss" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/abyss" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/irridius" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/irridius" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/irridius" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/bomb" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/bomb" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/bomb" to="." method="_on_wrong_mouse_exited" flags=18]
+[connection signal="button_down" from="Buttons/black_paper" to="." method="_on_wrong_button_down" flags=18]
+[connection signal="mouse_entered" from="Buttons/black_paper" to="." method="_on_wrong_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Buttons/black_paper" to="." method="_on_wrong_mouse_exited" flags=18]
