@@ -1,10 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://pmws21h0cgau"]
 
-[sub_resource type="SystemFont" id="SystemFont_u6r6a"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
+[ext_resource type="FontFile" uid="uid://bmwpp83oauyyb" path="res://BLOCKYBLOCKS-Regular.otf" id="1_8ia2w"]
 
 [resource]
-default_font = SubResource("SystemFont_u6r6a")
+default_font = ExtResource("1_8ia2w")
 default_font_size = 120
 Label/colors/font_color = Color(0, 1, 0, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)

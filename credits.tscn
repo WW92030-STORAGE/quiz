@@ -3,15 +3,10 @@
 [ext_resource type="Script" uid="uid://bqk7mbijm1s4u" path="res://side_menu.gd" id="1_g4wvt"]
 [ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="2_pjc1l"]
 [ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="3_j6beo"]
-
-[sub_resource type="SystemFont" id="SystemFont_ouk20"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
+[ext_resource type="FontFile" uid="uid://bmwpp83oauyyb" path="res://BLOCKYBLOCKS-Regular.otf" id="4_pjc1l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2nui"]
 bg_color = Color(0, 0, 0, 0)
-
-[sub_resource type="SystemFont" id="SystemFont_4hy44"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
 
 [node name="help" type="Node2D" unique_id=621948258]
 script = ExtResource("1_g4wvt")
@@ -38,7 +33,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_fonts/font = ExtResource("4_pjc1l")
 theme_override_font_sizes/font_size = 160
 text = "BACK"
 
@@ -54,7 +49,7 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("3_j6beo")
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_4hy44")
+theme_override_fonts/font = ExtResource("4_pjc1l")
 theme_override_font_sizes/font_size = 250
 text = "CREDITS"
 horizontal_alignment = 1

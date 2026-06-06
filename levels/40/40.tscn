@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b37fb3x6o80dg" path="res://assets/colors/green.png" id="5_mpjit"]
 [ext_resource type="Texture2D" uid="uid://cfefnjc1fdtt8" path="res://assets/CIRCLE.png" id="6_blva2"]
 [ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="7_3qtjt"]
+[ext_resource type="FontFile" uid="uid://bmwpp83oauyyb" path="res://BLOCKYBLOCKS-Regular.otf" id="8_iaifb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dois"]
 normal = Vector2(1, 0)
@@ -24,10 +25,6 @@ bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5dois"]
 radius = 64.0
-
-[sub_resource type="SystemFont" id="SystemFont_3ifn2"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
-subpixel_positioning = 0
 
 [node name="28" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
 script = ExtResource("1_btf50")
@@ -109,7 +106,7 @@ offset_right = 43.0
 offset_bottom = 44.0
 theme = ExtResource("7_3qtjt")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3ifn2")
+theme_override_fonts/font = ExtResource("8_iaifb")
 theme_override_font_sizes/font_size = 250
 text = "0"
 

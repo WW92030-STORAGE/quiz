@@ -5,10 +5,7 @@
 [ext_resource type="Theme" uid="uid://pmws21h0cgau" path="res://assets/UI.tres" id="3_jfkq8"]
 [ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="4_l30qs"]
 [ext_resource type="Theme" uid="uid://cmaar3dkhs2iu" path="res://assets/numbers.tres" id="5_5wikl"]
-
-[sub_resource type="SystemFont" id="SystemFont_4rgef"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://bmwpp83oauyyb" path="res://BLOCKYBLOCKS-Regular.otf" id="5_6ytkk"]
 
 [node name="--" type="Node2D" unique_id=1465919076 groups=["LEVEL"]]
 script = ExtResource("1_p57x5")
@@ -50,7 +47,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_4rgef")
+theme_override_fonts/font = ExtResource("5_6ytkk")
 theme_override_font_sizes/font_size = 160
 text = "CONTINUE"
 

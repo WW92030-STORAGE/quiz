@@ -3,14 +3,7 @@
 [ext_resource type="Script" uid="uid://ydbmd7qc6vm2" path="res://menu.gd" id="1_ouk20"]
 [ext_resource type="Theme" uid="uid://cccbov8irtda3" path="res://assets/answer_button.tres" id="2_mae5d"]
 [ext_resource type="Theme" uid="uid://ccsh66ee0k8re" path="res://assets/large.tres" id="3_mae5d"]
-
-[sub_resource type="SystemFont" id="SystemFont_ouk20"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
-subpixel_positioning = 0
-
-[sub_resource type="SystemFont" id="SystemFont_4hy44"]
-font_names = PackedStringArray("BLOCKY BLOCKS")
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://bmwpp83oauyyb" path="res://BLOCKYBLOCKS-Regular.otf" id="4_4hy44"]
 
 [node name="menu" type="Node2D" unique_id=621948258]
 script = ExtResource("1_ouk20")
@@ -37,7 +30,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_fonts/font = ExtResource("4_4hy44")
 theme_override_font_sizes/font_size = 160
 text = "BEGIN"
 
@@ -51,7 +44,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_fonts/font = ExtResource("4_4hy44")
 theme_override_font_sizes/font_size = 160
 text = "HELP"
 
@@ -65,7 +58,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_fonts/font = ExtResource("4_4hy44")
 theme_override_font_sizes/font_size = 160
 text = "CREDITS"
 
@@ -79,7 +72,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_ouk20")
+theme_override_fonts/font = ExtResource("4_4hy44")
 theme_override_font_sizes/font_size = 160
 text = "CONTACT"
 
@@ -90,7 +83,7 @@ offset_right = 992.0
 offset_bottom = 288.0
 theme = ExtResource("3_mae5d")
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_4hy44")
+theme_override_fonts/font = ExtResource("4_4hy44")
 theme_override_font_sizes/font_size = 250
 text = "AN ORDINARY
 ONLINE QUIZ"
