@@ -6,7 +6,7 @@ extends Node2D
 
 @onready var INDEX = 0
 var START_CHECK = -1
-var SECONDS = 8
+var SECONDS = 4
 # 0 = rect, 1 = circle
 
 var base_sizes = [64, 256]
